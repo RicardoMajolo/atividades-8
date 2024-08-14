@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+#define TAMANHO 10
+
+int main() {
+
+    float vetor1[TAMANHO], vetor2[TAMANHO];
+    int resultado[TAMANHO];
+    
+
+    printf("Digite 10 valores reais para o primeiro vetor:\n");
+    for(int i = 0; i < TAMANHO; i++) {
+        printf("vetor1[%d]: ", i);
+        scanf("%f", &vetor1[i]);
+    }
+    
+
+    printf("Digite 10 valores reais para o segundo vetor:\n");
+    for(int i = 0; i < TAMANHO; i++) {
+        printf("vetor2[%d]: ", i);
+        scanf("%f", &vetor2[i]);
+    }
+    
+    for(int i = 0; i < TAMANHO; i++) {
+        if (vetor1[i] == vetor2[i]) {
+            resultado[i] = 1;
+        } else {
+            resultado[i] = 0;
+        }
+    }
+    
+
+    printf("\nVetor 1:\n");
+    for(int i = 0; i < TAMANHO; i++) {
+        printf("vetor1[%d] = %.2f\n", i, vetor1[i]);
+    }
+
+    printf("\nVetor 2:\n");
+    for(int i = 0; i < TAMANHO; i++) {
+        printf("vetor2[%d] = %.2f\n", i, vetor2[i]);
+    }
+
+    printf("\nVetor Resultado:\n");
+    for(int i = 0; i < TAMANHO; i++) {
+        printf("resultado[%d] = %d\n", i, resultado[i]);
+    }
+    
+    return 0;
+}
