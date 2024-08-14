@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+#define DIAS 30
+
+int main() {
+    int carros[DIAS];
+    int i;
+    int dia_maior, dia_menor;
+    int maior_volume, menor_volume;
+
+    printf("Digite o número de carros para cada um dos 30 dias:\n");
+    for (i = 0; i < DIAS; i++) {
+        printf("Dia %d: ", i + 1);
+        scanf("%d", &carros[i]);
+    }
+
+    maior_volume = menor_volume = carros[0];
+    dia_maior = dia_menor = 0;
+    for (i = 1; i < DIAS; i++) {
+        if (carros[i] > maior_volume) {
+            maior_volume = carros[i];
+            dia_maior = i;
+        }
+        if (carros[i] < menor_volume) {
+            menor_volume = carros[i];
+            dia_menor = i;
+        }
+    }
+
+    printf("\nO maior volume ocorreu no dia %d e foi de %d carros.\n", dia_maior + 1, maior_volume);
+    printf("O menor volume ocorreu no dia %d e foi de %d carros.\n", dia_menor + 1, menor_volume);
+
+    return 0;
+}
