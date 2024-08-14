@@ -1,0 +1,31 @@
+/*2. Escreva um programa em C que leia 6 valores reais e armazene em um vetor X. Construir um vetor
+E do mesmo tipo e dimensão. Os valores armazenados nos vetores devem seguir as seguintes regras:
+a) O vetor X deve ter os seus elementos informados pelo usuário;
+b) Cada posição de índice ímpar do vetor Y deve armazenar um valor de índice par do vetor X;
+c) Cada posição de índice par no vetor Y deve armazenar um valor de índice ímpar do vetor X.
+O programa deve apresentar os 2 vetores. */
+#incluir <stdio.h>
+int principal () {
+    veterinário flutuante[6];
+    flutuar vete[6];
+    int eu;
+    para (i=0; i<6; i++){
+        printf("%i ) informe um número real : ", i+1);
+        scanf ("%f", &vet[i]);
+    }
+    para (int j=0; j<6; j++){
+        se (j%2==0){
+            vete[j]=veterinário[j+1];
+       }
+       outro {
+        vete[j]=veterinário[j-1];
+       }
+    }
+    para (int k=0; k<6; k++){
+        printf ("%.2f ", vet[k]);
+    }
+    printf ("\n");
+    para (int la=0; la<6; la++){
+        printf ("%.2f ", vete[la]);
+    }
+}
